@@ -1,9 +1,10 @@
 import React from 'react';
-import Button from "./component/Button";
+import Window from "./component/Window";
+import "./style.css";
 
 function App() {
   return (
-    <Button />
+    <Window />
   );
 }
 

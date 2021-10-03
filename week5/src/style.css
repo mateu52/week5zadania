@@ -1,0 +1,16 @@
+.overlay{
+  width:40%;
+  height: 40%;
+  border:2px solid red;
+  background-color: aquamarine;
+  margin:auto;
+  padding:auto 10px auto 10px;
+}
+.menuButton{
+  border:2px solid burlywood;
+  width:100px;
+  height: auto;
+  margin:5px;
+  padding:0px 5px 7px 5px;
+  background-color: beige;
+}

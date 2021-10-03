@@ -1,12 +1,17 @@
 import React from 'react';
-import Dialog from './Dialog';
 
-function Button(){
+function Button({handleClickOpen}){
 
     return(
-        <Dialog />
+        <div className="menuButton">
+            <h5>Kliknij i sprawdz </h5>
+            <button
+                onClick={handleClickOpen}
+            >
+                sprawdz
+            </button>
+        </div>
     )
-
 }
 
 export default Button;
