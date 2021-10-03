@@ -5,12 +5,20 @@
   background-color: aquamarine;
   margin:auto;
   padding:auto 10px auto 10px;
+  text-align: center;
 }
 .menuButton{
   border:2px solid burlywood;
   width:100px;
-  height: auto;
+  height: 100px;
   margin:5px;
   padding:0px 5px 7px 5px;
   background-color: beige;
+  display: flex;
+  justify-content:space-around;
+  text-align:center;
+  flex-wrap: wrap;
+}
+.confirmButton{
+  margin: 7px 0px;
 }

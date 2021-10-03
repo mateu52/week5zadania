@@ -14,6 +14,12 @@ function Window(){
         setOpen(false);
         console.log("zaakceptowano");
     };
+    const handleAbort=()=>{
+        console.log("Abort");
+    };
+    const handleConfirm=()=>{
+        console.log("Confirm");
+    }
 
 
 
@@ -28,6 +34,8 @@ function Window(){
                 <Dialog
                 handleClose={handleClose}
                 open={open}
+                handleAbort={handleAbort}
+                handleConfirm={handleConfirm}
             />
             ) : null}
         </div>
