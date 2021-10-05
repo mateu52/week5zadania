@@ -13,9 +13,6 @@ function Snackbutton(){
         return timeIndex;
     };
 
-    const handleClose=()=>{
-        setOpen(false);
-    }
     useEffect(() => {
         return () => {
           clearTimeout(handleOpen);
@@ -37,6 +34,7 @@ function Snackbutton(){
                 //open={open}
                 open={open}
                 time={time}
+                position="centerBottom"
                 //action={action}
             />
             ) : null}

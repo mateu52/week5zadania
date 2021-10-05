@@ -1,12 +1,15 @@
 import React from 'react';
 
+
+
 function Button({handleOpen}){
 
     return(
         <div className="menuButton">
-            <h5>Click to timer </h5>
+            <h5>Podaj props </h5>
+
             <button
-                onClick={handleOpen}
+                onClick={handleOpen} 
             >
                 sprawdz
             </button>
