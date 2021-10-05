@@ -1,5 +1,6 @@
 import React from 'react';
 import Positions from "./Position";
+import Messages from './Message';
 
 function Snackbar({position}){
     const styles={
