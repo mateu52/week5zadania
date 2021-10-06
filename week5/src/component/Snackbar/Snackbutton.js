@@ -34,6 +34,7 @@ function Snackbutton(){
                 //open={open}
                 open={open}
                 time={time}
+                severity="errorMsg"
                 position="centerBottom"
                 //action={action}
             />
