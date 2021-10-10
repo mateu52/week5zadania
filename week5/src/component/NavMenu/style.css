@@ -23,12 +23,13 @@
     background-color: rgba(109, 243, 31, 0.692);
     max-height: 10ch;
     max-width: 92px;
-    padding: 0px 1px 0px 1px;
+    padding: 0px 3px 0px 1px;
     text-align: center;
     list-style: none;
     display:block;
     position: relative;
     bottom:16px;
+    
 }
 .navOpt:hover{
     border:2px dotted green;
@@ -36,4 +37,12 @@
 }
 a{
     text-decoration:none;
+}
+ol li{
+    list-style: none;
+}
+ol li a{
+}
+li a:focus{
+    color:red;
 }
