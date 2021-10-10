@@ -20,7 +20,7 @@ function Snackbar({position, severity}){
 
     return(
        <div style={styles} className={checkMsg(severity)} >
-           <h6>time remaining</h6>
+           <h6>Message !!!!!!</h6>
            {/* <h6>{handleClose}</h6> */}
         </div>
     )
