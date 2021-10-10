@@ -6,13 +6,20 @@
     background-color: rgba(235, 231, 48, 0.644);
     border: 2px dotted rgba(41, 243, 0, 0.842);
     margin: 2px 0px 2px 0px;
-    max-width: 80px;
-    max-height: 2ch;
+    max-width: 13ch;
+    max-height: 3ch;
+    text-decoration: none;
+    padding:2px 0px;
+    display: inline-block;
+    text-align: center;
 }
+.menuButton:hover ol{
+    display:block;
+}
+/* .navMenu{
+     display:none; 
+} */
 .navMenu{
-    /* display:none; */
-}
-.navMenu:hover{
     background-color: rgba(109, 243, 31, 0.692);
     max-height: 10ch;
     max-width: 92px;
