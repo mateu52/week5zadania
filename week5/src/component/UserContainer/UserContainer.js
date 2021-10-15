@@ -41,6 +41,7 @@ function UserContainer(){
                 </label>
                 <UserSearch 
                 serch={serch}
+                data={data}
                 />
             </div>  
         ); 
