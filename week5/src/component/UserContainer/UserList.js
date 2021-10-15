@@ -1,6 +1,7 @@
 import React from 'react';
 //import "./../../../public/users.json";
 import UserContainer from './UserContainer';
+import UserSearch from './UserSearch';
 //wyswietlanie uzytkowanika
 function UserList({data}){
 
@@ -12,6 +13,9 @@ function UserList({data}){
                             
                         </div>
                 })}
+            <UserSearch
+                data={data}
+                />
         </div>
     )
 }
