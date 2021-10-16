@@ -26,7 +26,9 @@ function UserContainer(){
                 data={data}
                 />
                 <UserSearch 
-                serch={serch}
+                data={data}
+                />
+                <UserContainer
                 data={data}
                 />
             </div>  
