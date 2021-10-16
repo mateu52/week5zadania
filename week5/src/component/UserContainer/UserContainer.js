@@ -7,11 +7,7 @@ import UserSearch from './UserSearch';
 
 function UserContainer(){
     const [data,setData]=useState([]);
-    const [serch, setSerch] =useState('....');
 
-    const handleSearch=(event)=>{
-        setSerch(event.target.value);
-    };
 
     const getData=()=>{  fetch('users.json'  ,
             {  headers : {  'Content-Type': 'application/json',  
@@ -29,16 +25,6 @@ function UserContainer(){
                 <UserList 
                 data={data}
                 />
-                <h6>Wyszukaj:</h6>
-                <label>
-                    Imie lub nazwisko:
-                    <input
-                    type="text"
-                    name="name"
-                    value={serch}
-                    onChange={handleSearch}
-                ></input>
-                </label>
                 <UserSearch 
                 serch={serch}
                 data={data}
