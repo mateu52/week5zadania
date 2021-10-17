@@ -1,0 +1,14 @@
+.tab{
+    border:2px solid rgb(238, 67, 67);
+    margin:3px;
+    padding: 4px;
+    width: 280px;
+    text-align: center;
+}
+.tab1{
+    border:2px solid #6258e7;
+    margin:2px;
+    padding:4px;
+    width: 300px;
+    text-align: center;
+}

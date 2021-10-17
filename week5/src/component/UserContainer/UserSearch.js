@@ -8,8 +8,8 @@ import User from './User';
 
 //tu wprowadzamy zmienną która szukamy
 function UserSearch({data}){
-    const [form, setForm]=useState('')
-    const [serch, setSerch] =useState('....');
+    //const [form, setForm]=useState('')
+    const [serch, setSerch] =useState('');
     const handleSearch=(event)=>{
         setSerch(event.target.value);
     };
@@ -17,14 +17,11 @@ function UserSearch({data}){
         e.preventDefault();
         //setForm(serch);
     }
-    const SendCompon=(e)=>{
-        e.preventDefault();
-        <div><User 
-                    data={data}
-                    serch={serch}
-                />
-                </div>
+    const sendRes=(event)=>{
+        event.preventDefault();
+        setSerch('');
     }
+    
     return(
         <div>
                 <form>
@@ -37,17 +34,21 @@ function UserSearch({data}){
                                 name="name"
                                 value={serch}
                                 onChange={handleSearch}
+                                placeholder="Imie || Nazwisko"
                             >
                             </input>
                         </label>
                         <button
-                            onClick={SendCompon}
+                            onClick={sendRes}
                             >
                             Enter
                         </button>
                     </div>
                 </form>
-                {serch}
+                <User
+                    data={data}
+                    serch={serch}
+                />
         </div>
     )
 }

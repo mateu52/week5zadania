@@ -9,7 +9,9 @@ function UserList({data}){
         <div>
             {data.map(function(x){
                     return <div>
-                            <p key={x.id}>{x.name}, {x.surname}, {x.age} lat.</p>
+                            <p key={x.id}
+                            className="tab1">
+                                {x.name}, {x.surname}, {x.age} lat.</p>
                             
                         </div>
                 })}
