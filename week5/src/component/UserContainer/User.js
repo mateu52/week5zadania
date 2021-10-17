@@ -17,8 +17,7 @@ function User({data,serch}){
                     className="tab">
                         {x.name}, {x.surname}, {x.age} lat.</p>
                 }
-            })}
-            
+            })}=
         </div>
     )
 }

@@ -12,6 +12,7 @@ function UserSearch({data}){
     const [serch, setSerch] =useState('');
     const handleSearch=(event)=>{
         setSerch(event.target.value);
+        event.preventDefault();
     };
     const sendForm=(e)=>{
         e.preventDefault();
@@ -24,7 +25,7 @@ function UserSearch({data}){
     
     return(
         <div>
-                <form>
+                <form onSubmit={sendForm}>
                     <div>
                         <h6>Wyszukaj:</h6>
                         <label>
@@ -38,13 +39,16 @@ function UserSearch({data}){
                             >
                             </input>
                         </label>
-                        <button
-                            onClick={sendRes}
-                            >
-                            Enter
-                        </button>
+                        
                     </div>
                 </form>
+                <label>
+                            <button
+                                onClick={sendRes}
+                                >
+                                Enter
+                            </button>
+                        </label>
                 <User
                     data={data}
                     serch={serch}

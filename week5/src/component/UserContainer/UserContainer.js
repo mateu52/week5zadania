@@ -4,8 +4,8 @@ import React,{useState, useEffect} from 'react';
 //fetch
 import UserList from './UserList';
 import UserSearch from './UserSearch';
-import './style.css';
-function UserContainer({serch}){
+
+function UserContainer(){
     const [data,setData]=useState([]);
 
 
