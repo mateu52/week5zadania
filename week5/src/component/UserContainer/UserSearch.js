@@ -16,13 +16,12 @@ function UserSearch({data}){
     };
     const sendForm=(e)=>{
         e.preventDefault();
-        //setForm(serch);
     }
     const sendRes=(event)=>{
         event.preventDefault();
         setSerch('');
     }
-    
+
     return(
         <div>
                 <form onSubmit={sendForm}>
@@ -39,14 +38,13 @@ function UserSearch({data}){
                             >
                             </input>
                         </label>
-                        
                     </div>
                 </form>
                 <label>
                             <button
                                 onClick={sendRes}
                                 >
-                                Enter
+                                Reset
                             </button>
                         </label>
                 <User
