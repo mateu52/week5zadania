@@ -9,13 +9,11 @@ function UserList({data}){
         <div>
             {data.map(function(x){
                     return <div>
-                            <p>{x.name}, {x.surname}, {x.age} lat.</p>
+                            <p key={x.id}>{x.name}, {x.surname}, {x.age} lat.</p>
                             
                         </div>
                 })}
-            <UserSearch
-                data={data}
-                />
+            
         </div>
     )
 }

@@ -5,7 +5,7 @@ import React,{useState, useEffect} from 'react';
 import UserList from './UserList';
 import UserSearch from './UserSearch';
 
-function UserContainer(){
+function UserContainer({serch}){
     const [data,setData]=useState([]);
 
 
@@ -28,9 +28,7 @@ function UserContainer(){
                 <UserSearch 
                 data={data}
                 />
-                <UserContainer
-                data={data}
-                />
+                
             </div>  
         ); 
     
