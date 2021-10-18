@@ -1,4 +1,5 @@
 import React from 'react';
+import UserSearch from './UserSearch';
 function UserList({data}){
 
     return(
@@ -10,6 +11,9 @@ function UserList({data}){
                                 {x.name}, {x.surname}, {x.age} lat.</p>
                         </div>
                 })}
+            <UserSearch 
+            data={data} 
+            />
         </div>
     )
 }

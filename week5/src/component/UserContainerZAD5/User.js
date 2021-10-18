@@ -19,7 +19,7 @@ function User({data,serch}){
                 }
             })}
         </div>
-    )
+    );
 }
 
 export default User;

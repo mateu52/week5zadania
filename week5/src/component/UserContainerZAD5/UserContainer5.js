@@ -1,8 +1,10 @@
 import React,{useState, useEffect} from 'react';
 
 //fetch
-import UserList from './UserList';
-import UserSearch from './UserSearch';
+import {
+    BrowserRouter as Router,
+    Link
+  } from "react-router-dom";
 
 function UserContainer5(){
     const [data,setData]=useState([]);
@@ -20,14 +22,23 @@ function UserContainer5(){
             getData()  },[])
 
     return (
-            <div>
-                <UserList
-                data={data}
-                />
-                <UserSearch
-                data={data}
-                />
-            </div>
+            <Router>
+                <div>
+                    <nav>
+                        <ol>
+                            <li>
+                                <Link to="/"><a>Home</a></Link>
+                            </li>
+                            <li>
+                                <link to="/users"><a>Users</a></link>
+                            </li>
+                            <li>
+                                <link to="/user-profile"><a>UserProfile</a></link>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </Router>
         );
 }
 
