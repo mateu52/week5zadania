@@ -7,6 +7,7 @@ import NavMenu from './component/NavMenu/NavMenu';
 import UserContainer from './component/UserContainer/UserContainer';
 import UserContainer5 from './component/UserContainerZAD5/UserContainer5'
 import App5 from './component/UserContainerZAD5/App5';
+import AppSpr from './component/zad5skrot/AppSpr';
 
 function App() {
   return (

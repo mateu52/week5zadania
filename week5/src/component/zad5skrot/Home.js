@@ -1,12 +1,12 @@
 import React from "react";
 
-function Kalk(){
+function Home(){
 
     return(
         <div>
-            <h3>Dane, zmienne</h3>
+            <h3>Wartości</h3>
         </div>
     );
 }
 
-export default Kalk;
+export default Home;
