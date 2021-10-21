@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react';
-
+import UserList from './UserList';
 //fetch
 import {
     BrowserRouter as Router,
@@ -22,7 +22,6 @@ function UserContainer5(){
             getData()  },[])
 
     return (
-            <Router>
                 <div>
                     <nav>
                         <ol>
@@ -30,15 +29,17 @@ function UserContainer5(){
                                 <Link to="/"><a>Home</a></Link>
                             </li>
                             <li>
-                                <link to="/users"><a>Users</a></link>
+                                <Link to="/users"><a>Users</a>
+                                
+                                </Link>
                             </li>
                             <li>
-                                <link to="/user-profile"><a>UserProfile</a></link>
+                                <Link to="/user-profile"><a>UserProfile</a>
+                                </Link>
                             </li>
                         </ol>
                     </nav>
                 </div>
-            </Router>
         );
 }
 

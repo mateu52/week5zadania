@@ -6,6 +6,7 @@ function User({data,serch}){
 
     return(
         <div>
+            <h1>Znaleziono:</h1>
             {data.map(function(x){
                 if (x.name===serch){
                     return <p key={x.id}
@@ -18,7 +19,7 @@ function User({data,serch}){
                         {x.name}, {x.surname}, {x.age} lat.</p>
                 }
             })}
-        </div>
+            </div>
     );
 }
 

@@ -4,14 +4,30 @@ import UserList from './UserList';
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
-    Link
+    Route
   } from "react-router-dom";
 import UserSearch from './UserSearch';
 import User from './User';
-
+//to jest APP
 function App5(){
     const [data,setData]=useState([]);
+    const [word,setWord]=useState();
+    const [user,setUser]=useState(null);
+
+    function serchUser(){
+        setUser("Aha");
+    }
+
+
+    const [serch, setSerch] =useState('');
+    const handleSearch=(event)=>{
+        setSerch(event.target.value);
+        event.preventDefault();
+    };
+    const sendRes=(event)=>{
+        event.preventDefault();
+        setSerch('');
+    }
 
     const getData=()=>{  fetch('users.json'  ,
             {  headers : {  'Content-Type': 'application/json',
@@ -26,19 +42,19 @@ function App5(){
 
     return(
         <Router>
+            <UserContainer5 />
             <Switch>
-                <Route path='/'>
-                    <UserContainer5
-                    />
-                </Route>
                 <Route path='/users'>
-                    <UserList 
+                    <UserList
                         data={data}
+                        handleSearch={serchUser}
+                        handleOnChange={word}
                     />
                 </Route>
                 <Route path='/user-profile'>
                     <User
                         data={data}
+                        serch={serch}
                     />
                 </Route>
             </Switch>

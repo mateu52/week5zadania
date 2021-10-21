@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,forwardRef} from 'react';
 //import "./../../../public/users.json";
 import User from './User';
 //formularz z polem imie lub nazwisko
@@ -7,23 +7,16 @@ import User from './User';
 //na liscie uzytkownicy spelniajacy kryteria wyszukiwania
 
 //tu wprowadzamy zmienną która szukamy
-function UserSearch({data}){
+const UserSearch=forwardRef(
+    ({data, handleSearch,handleOnChange,sendRes,serch})=>{
     //const [form, setForm]=useState('')
-    const [serch, setSerch] =useState('');
-    const handleSearch=(event)=>{
-        setSerch(event.target.value);
-        event.preventDefault();
-    };
     const sendForm=(e)=>{
         e.preventDefault();
-    }
-    const sendRes=(event)=>{
-        event.preventDefault();
-        setSerch('');
     }
 
     return(
         <div>
+            <h1>Wyszukiwarka</h1>
                 <form onSubmit={sendForm}>
                     <div>
                         <h6>Wyszukaj:</h6>
@@ -31,9 +24,8 @@ function UserSearch({data}){
                             Imie lub nazwisko:
                             <input
                                 type="text"
-                                name="name"
-                                value={serch}
-                                onChange={handleSearch}
+                                name="word"
+                                onChange={handleOnChange}
                                 placeholder="Imie || Nazwisko"
                             >
                             </input>
@@ -41,18 +33,19 @@ function UserSearch({data}){
                     </div>
                 </form>
                 <label>
+                            <button 
+                                onClick={handleSearch}>
+                                Search
+                            </button>
                             <button
                                 onClick={sendRes}
                                 >
                                 Reset
                             </button>
                         </label>
-                <User
-                    data={data}
-                    serch={serch}
-                />
         </div>
-    )
+    );
 }
+);
 
 export default UserSearch;

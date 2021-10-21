@@ -1,9 +1,11 @@
 import React from 'react';
 import UserSearch from './UserSearch';
+import {data} from './App5';
 function UserList({data}){
 
     return(
         <div>
+            <h1>Lista</h1>
             {data.map(function(x){
                     return <div>
                             <p key={x.id}
@@ -14,6 +16,7 @@ function UserList({data}){
             <UserSearch 
             data={data} 
             />
+            
         </div>
     )
 }
