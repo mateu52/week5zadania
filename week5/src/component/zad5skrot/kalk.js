@@ -1,10 +1,11 @@
 import React from "react";
 
-function Kalk(){
+function Kalk({select}){
 
     return(
         <div>
-            <h3>Dane, zmienne</h3>
+            <h3>wybrany index:</h3>
+            <p>{select}</p>
         </div>
     );
 }
