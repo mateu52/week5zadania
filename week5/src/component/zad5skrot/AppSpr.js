@@ -7,6 +7,10 @@ import {
     Switch,
     Route
   } from "react-router-dom";
+  //wywulac tu przekzanie funkcji ktora 
+  //w komponencie dziecka
+  //wskaże nam parametr
+  //który tu wyswietlimy
 function AppSpr(){
     const users = [
         {
@@ -15,7 +19,7 @@ function AppSpr(){
             age:"27"
         },
         {
-            id:2,
+            id:2, 
             name:"Henry",
             age:"44"
         },
@@ -25,23 +29,37 @@ function AppSpr(){
             age:"44"
         }
     ]
-    const [val, setValue] =useState();
-    const [select, setSelect] = useState('');
+    const [val, setValue] =useState("OK");
+    const [select, setSelect] = useState('sss');
+    const [name, setName]=useState("");
     const handleSelect=()=>{
         setSelect(val);
+        return;
     }
+    const handleValue=(event)=>{
+        setValue(event.target.value);
+    }
+    const handleVal=()=>{
+        setValue("Okok");
+    }
+    const handleName=()=>{
 
+    }
     return(
         <Router>
             <Conteiner />
             <Switch>
                 <Route path="/home">
                     <Home
-                        handle={handleSelect}
+                        handle={handleVal}
+                        hval={val}
+                        hName={handleName}
+                        handleName={name}
                     />
                 </Route>
                 <Route path="/kalk">
                     <Kalk
+                    handle={val}
                     />
                 </Route>
             </Switch>
