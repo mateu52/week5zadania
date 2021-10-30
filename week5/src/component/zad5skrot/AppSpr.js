@@ -29,21 +29,10 @@ function AppSpr(){
             age:"44"
         }
     ]
-    const [val, setValue] =useState("OK");
-    const [select, setSelect] = useState('sss');
-    const [name, setName]=useState("");
-    const handleSelect=()=>{
-        setSelect(val);
-        return;
-    }
+    const [val, setValue] =useState("OoK");
+    
     const handleValue=(event)=>{
         setValue(event.target.value);
-    }
-    const handleVal=()=>{
-        setValue("Okok");
-    }
-    const handleName=()=>{
-
     }
     return(
         <Router>
@@ -51,10 +40,8 @@ function AppSpr(){
             <Switch>
                 <Route path="/home">
                     <Home
-                        handle={handleVal}
                         hval={val}
-                        hName={handleName}
-                        handleName={name}
+                        hName={handleValue}
                     />
                 </Route>
                 <Route path="/kalk">

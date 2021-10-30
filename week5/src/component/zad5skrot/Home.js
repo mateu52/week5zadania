@@ -3,7 +3,7 @@ import React,{useState} from "react";
 //póżniej przekazemy parametry z komponentu rodzica
 //teraz całość zadziała tutaj
 
-function Home({handle,hval,hName,handleName}){
+function Home({handle,hName}){
     const users = [
         {
             id:1,
