@@ -3,7 +3,7 @@ import React,{useState} from "react";
 //póżniej przekazemy parametry z komponentu rodzica
 //teraz całość zadziała tutaj
 
-function Home({handle,hName}){
+function Home({change, wart}){
     const users = [
         {
             id:1,
@@ -21,21 +21,25 @@ function Home({handle,hName}){
             age:"44"
         }
     ]
-    const [name,setName]=useState("");
+    const [name,setName]=useState("Yes");
+    const [nm,setNm]=useState("Y");
     const handleN=(event)=>{
-        setName(event)
+        setNm(event);
+        return;
+    }
+    const handleName=()=>{
+        setName(nm);
+        return;
     }
     return(
         <div>
             <h4>Podaj imię: </h4>
-            <input onClick={hName}>
+            <input onChange={handleN}>
             </input>
-            <button>set name</button>
             <br></br><br></br>
-            <button onClick={handle}>
+            <button onClick={handleName}>
                 Ok
             </button>
-            <h2>{hval}</h2>
             <h3>{name}</h3>
         </div>
     );
