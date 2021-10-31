@@ -5,7 +5,7 @@ import Snackbutton from './component/Snackbar/Snackbutton'; //zad2
 import AppMenu from './component/NavMenu/AppMenu'; //zad3
 import UserContainer from './component/UserContainer/UserContainer'; //zad4
 import App5 from './component/UserContainerZAD5/App5'; //zad5
-import AppSpr from './component/zad5skrot/AppSpr'; //moj przyklad przed zad5
+//import AppSpr from './component/zad5skrot/AppSpr'; //moj przyklad przed zad5
 
 function App() {
   return (
