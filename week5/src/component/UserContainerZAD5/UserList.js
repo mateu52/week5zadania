@@ -20,5 +20,4 @@ function UserList({data}){
         </div>
     )
 }
-
 export default UserList;

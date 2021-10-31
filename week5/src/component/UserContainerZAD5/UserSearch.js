@@ -47,5 +47,4 @@ const UserSearch=forwardRef(
     );
 }
 );
-
 export default UserSearch;

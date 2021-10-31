@@ -3,7 +3,6 @@ import React from 'react';
 //tu mamy zmienną którą szukay lub wiele
 import "./style.css";
 function User({data,serch}){
-
     return(
         <div>
             <h1>Znaleziono:</h1>

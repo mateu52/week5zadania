@@ -17,8 +17,8 @@ function App() {
     //<NavMenu />
     //<UserContainer />
     //<UserContainer5 />
-    //<App5 />
-    <AppSpr />
+    <App5 />
+    //<AppSpr />
   );
 }
 
