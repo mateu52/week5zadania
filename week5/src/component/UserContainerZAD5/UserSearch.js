@@ -7,17 +7,22 @@ import User from './User';
 //na liscie uzytkownicy spelniajacy kryteria wyszukiwania
 
 //tu wprowadzamy zmienną która szukamy
-const UserSearch=forwardRef(
-    ({data, handleSearch,handleOnChange,sendRes,serch})=>{
+function UserSearch({data,choice,handleChoice,handleRest}){
     //const [form, setForm]=useState('')
-    const sendForm=(e)=>{
-        e.preventDefault();
+    const [serch, setSerch] =useState('');
+    const handleSearch=(event)=>{
+        setSerch(event.target.value);
+        event.preventDefault();
+    };
+    const sendRes=(event)=>{
+        event.preventDefault();
+        setSerch('');
     }
-
+    
     return(
         <div>
             <h1>Wyszukiwarka</h1>
-                <form onSubmit={sendForm}>
+                
                     <div>
                         <h6>Wyszukaj:</h6>
                         <label>
@@ -25,26 +30,28 @@ const UserSearch=forwardRef(
                             <input
                                 type="text"
                                 name="word"
-                                onChange={handleOnChange}
+                                onChange={handleChoice}
                                 placeholder="Imie || Nazwisko"
                             >
                             </input>
                         </label>
                     </div>
-                </form>
-                <label>
-                            <button 
-                                onClick={handleSearch}>
-                                Search
-                            </button>
+                
+                    <label>
                             <button
-                                onClick={sendRes}
+                                onClick={handleRest}
                                 >
                                 Reset
                             </button>
-                        </label>
+                    </label>
+            <h3>{choice}</h3>
+            <User
+                data={data}
+                choice={choice}
+            />
         </div>
     );
 }
-);
+
+
 export default UserSearch;

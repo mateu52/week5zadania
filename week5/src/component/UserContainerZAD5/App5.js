@@ -11,13 +11,14 @@ import User from './User';
 //to jest APP
 function App5(){
     const [data,setData]=useState([]);
-    const [word,setWord]=useState();
-    const [user,setUser]=useState(null);
-
-    function serchUser(){
-        setUser("Aha");
+    const [rest, setRest]=useState('');
+    const [choice, setChoice] =useState('->'); //user
+    const handleChoice=(event)=>{  //przekazany user
+        setChoice(event.target.value);
     }
-
+    const handleRest=()=>{
+        setChoice(rest);
+    }
 
     const [serch, setSerch] =useState('');
     const handleSearch=(event)=>{
@@ -47,14 +48,15 @@ function App5(){
                 <Route path='/users'>
                     <UserList
                         data={data}
-                        handleSearch={serchUser}
-                        handleOnChange={word}
+                        choice={choice}
+                        handleChoice={handleChoice}
+                        handleRest={handleRest}
                     />
                 </Route>
                 <Route path='/user-profile'>
                     <User
                         data={data}
-                        serch={serch}
+                        choice={choice}
                     />
                 </Route>
             </Switch>

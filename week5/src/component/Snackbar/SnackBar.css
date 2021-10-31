@@ -6,3 +6,12 @@
     background-color:blue;
     color: white;
   }
+  .menuButton{
+    border:2px solid rgb(14, 13, 13);
+    width:200px;
+    height: 200px;
+    margin:5px;
+    padding:0px 5px 7px 5px;
+    background-color: beige;
+    text-align:center;
+  }

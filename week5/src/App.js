@@ -1,22 +1,18 @@
 import React from 'react';
-import Window from "./component/Window";
 import "./style.css";
-import Snackbutton from './component/Snackbar/Snackbutton';
-import AppMenu from './component/NavMenu/AppMenu';
-import NavMenu from './component/NavMenu/NavMenu';
-import UserContainer from './component/UserContainer/UserContainer';
-import UserContainer5 from './component/UserContainerZAD5/UserContainer5'
-import App5 from './component/UserContainerZAD5/App5';
-import AppSpr from './component/zad5skrot/AppSpr';
+import Window from './component/Window'; //zad1
+import Snackbutton from './component/Snackbar/Snackbutton'; //zad2
+import AppMenu from './component/NavMenu/AppMenu'; //zad3
+import UserContainer from './component/UserContainer/UserContainer'; //zad4
+import App5 from './component/UserContainerZAD5/App5'; //zad5
+import AppSpr from './component/zad5skrot/AppSpr'; //moj przyklad przed zad5
 
 function App() {
   return (
     //<Window />
-    //<Snackbutton />
+    //<Snackbutton /> //style są w NavMenu
     //<AppMenu />
-    //<NavMenu />
     //<UserContainer />
-    //<UserContainer5 />
     <App5 />
     //<AppSpr />
   );
