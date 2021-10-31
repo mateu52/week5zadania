@@ -28,8 +28,8 @@ function AppSpr(){
             name:"Henry",
             age:"44"
         }
-    ]
-    const [val, setValue] =useState("OoK");
+    ];
+    const [val,setValue] =useState("OoK");
     
     const handleValue=(event)=>{
         setValue(event.target.value);
@@ -40,8 +40,8 @@ function AppSpr(){
             <Switch>
                 <Route path="/home">
                     <Home
-                        hval={val}
-                        hName={handleValue}
+                        defaultValue={val}
+                        change={handleValue}
                     />
                 </Route>
                 <Route path="/kalk">
